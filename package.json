@@ -1,0 +1,29 @@
+{
+  "name": "tweet-joke-bot",
+  "version": "1.0.0",
+  "description": "Bot that tweets jokes as binary code",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukanthrope/tweet-joke-bot.git"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "nodejs"
+  ],
+  "author": "lukanthrope",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukanthrope/tweet-joke-bot/issues"
+  },
+  "homepage": "https://github.com/lukanthrope/tweet-joke-bot#readme",
+  "dependencies": {
+    "redis": "^2.8.0",
+    "twit": "^2.2.9"
+  }
+}
