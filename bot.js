@@ -2,6 +2,7 @@ const http = require('http');
 const twit = require('twit');
 const config = require('./config');
 var texts = require('./texts');
+texts.pt1[1].robJok[0] = Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10);
 
 var Twitter = new twit(config);
 
@@ -17,6 +18,7 @@ const makeUp = () => {
   let a = Object.keys(texts.pt1[i]).join('');
   let pt1 = texts.pt1[i][a];
   let pt2 = texts.pt2[i][a];
+  console.log(pt1.robJok);
 
   let str = pt1[Math.floor(Math.random() * pt1.length)] + pt2[Math.floor(Math.random() * pt2.length)];
 
@@ -47,7 +49,17 @@ const d = () => {
   }
 };
 
-setInterval(d, 30000);
+function tick()
+{
+    var mins = new Date().getMinutes();
+    if(mins == "00"){
+      d();
+     }
+}
+
+setInterval(function() { tick(); }, 40000);
+
+//setInterval(d, 40000);
 
 const server = http.createServer((req, res) => {});
 server.listen(3000, () => {
