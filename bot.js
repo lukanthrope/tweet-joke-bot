@@ -47,7 +47,7 @@ const d = () => {
   }
 };
 
-setInterval(d, 1200000);
+setInterval(d, 30000);
 
 const server = http.createServer((req, res) => {});
 server.listen(3000, () => {
