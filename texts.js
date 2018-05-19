@@ -1,7 +1,7 @@
 module.exports = {
   "pt1": [
     {"proffs": ['progger', 'my creator', 'neo']},
-    {"robJok": ['' +  Math.random().toString(26).substring(2, 10) + Math.random().toString(26).substring(2, 10)]},
+    {"robJok": ['']},
     {"simple": ['turtles', 'people', 'batman', 'deers', 'YOU', 'dudes']}
   ],
   "pt2": [
