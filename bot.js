@@ -1,3 +1,4 @@
+const http = require('http');
 const twit = require('twit');
 const config = require('./config');
 var texts = require('./texts');
@@ -7,7 +8,7 @@ var Twitter = new twit(config);
 var messages = [];
 
 const checkOut = () => {
-  if (messages.length > 90)
+  if (messages.length > 140)
     messages.length = 0;
 };
 
@@ -35,7 +36,20 @@ const writeTweet = () => {
     status: makeUp() + '\n #jokes #jokes4robots'
   }, function(err, data, response) {
     console.log(data);
-  });
+    });
 };
 
-setInterval(writeTweet, 21600000);
+const d = () => {
+  try {
+    writeTweet();
+  } catch(e) {
+    console.log(e);
+  }
+};
+
+setInterval(d, 1200000);
+
+const server = http.createServer((req, res) => {});
+server.listen(3000, () => {
+  console.log('3000 is listening..')
+});
