@@ -1,2 +1,2 @@
 # tweet-joke-bot
-Bot that tweets jokes as binary code
+Bot that tweets generated jokes (they can rarely be repeated)
